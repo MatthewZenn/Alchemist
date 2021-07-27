@@ -1,0 +1,22 @@
+{
+  "name": "alchemist",
+  "version": "1.0.0",
+  "description": "a poster making tool",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatthewZenn/Alchemist.git"
+  },
+  "author": "Matthew Zenn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MatthewZenn/Alchemist/issues"
+  },
+  "homepage": "https://github.com/MatthewZenn/Alchemist#readme",
+  "dependencies": {
+    "electron": "^13.1.7"
+  }
+}
