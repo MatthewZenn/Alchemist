@@ -74,3 +74,56 @@ body, html {
     left: 10px;
     z-index: 1;
 }
+
+.toolbar {
+    position: absolute;
+    display: block;
+    left: 0px;
+    height: 100%;
+    width: 60px;
+    background: rgb(40, 40, 40);
+    z-index: -1;
+}
+
+.panel {
+    position: absolute;
+    display: block;
+    right: 0px;
+    height: 100%;
+    width: 350px;
+    background: rgb(40, 40, 40);
+    z-index: -1;
+}
+
+.tool {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    background: transparent;
+    margin-bottom: 20px;
+    left: 10px;
+    top: 60px;
+    display: block;
+    outline: none;
+    border: 1px solid white;
+}
+
+.tool:hover {
+    background: rgb(44, 44, 44);
+    cursor: pointer;
+}
+
+.tool2 {
+    width: 60%;
+    background: transparent;
+}
+
+h1 {
+    position: relative;
+    display: inline;
+    left: 10px;
+    color: white;
+    font-family: Helvetica;
+    font: 50px;
+    font-weight: lighter;
+}
