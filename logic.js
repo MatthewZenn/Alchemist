@@ -1,4 +1,17 @@
 var maximize = document.getElementById("maximize")
+var myRuler = new ruler({
+    container: document.querySelector('#rulers'),
+    rulerHeight: 15,
+    fontFamily: 'arial',
+    fontSize: '7px', 
+    strokeStyle: 'grey',
+    lineWidth: 1,
+    enableMouseTracking: true,
+    enableToolTip: true
+});
+
+myRuler.api.setPos({x:100, y:100})
+myRuler.api.setScale(1.5);
 
 maximize.addEventListener("click", Maximize)
 

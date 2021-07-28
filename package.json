@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/MatthewZenn/Alchemist#readme",
   "dependencies": {
-    "electron": "^13.1.7"
+    "d3": "^7.0.0",
+    "electron": "^13.1.7",
+    "ruler.js": "^1.0.1"
   }
 }
