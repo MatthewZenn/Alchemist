@@ -10,6 +10,11 @@ var myRuler = new ruler({
     enableToolTip: true
 });
 
+var pointer = document.getElementById('pointer');
+var pencil = document.getElementById('pencil');
+var text = document.getElementById('text');
+
+
 myRuler.api.setPos({x:100, y:100})
 myRuler.api.setScale(1.5);
 
@@ -33,5 +38,15 @@ window.addEventListener('resize', () => {
     }
     else {
         document.getElementById("circle").innerHTML = "&triangle;"
+    }
+});
+
+document.getElementById('menu').addEventListener('click', () => {
+    if (document.getElementById('pop-out').style.display == "none")
+    {
+        document.getElementById('pop-out').style.display = "block";
+    }
+    else {
+        document.getElementById('pop-out').style.display = "none";
     }
 });

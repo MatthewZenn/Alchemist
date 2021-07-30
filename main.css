@@ -15,7 +15,6 @@ body, html {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2;
 }
 
 #border nav {
@@ -80,19 +79,32 @@ body, html {
     position: absolute;
     display: block;
     left: 0px;
-    height: 100%;
+    bottom: 0;
+    height: 96%;
     width: 60px;
     background: rgb(40, 40, 40);
-    z-index: 1;
 }
 
-.panel {
+#pop-out {
+    position: fixed;
+    left: 62px;
+    top: 42px;
+    height: 40%;
+    width: 300px;
+    background: rgb(40, 40, 40);
+    z-index: 1000;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.color-panel {
     position: absolute;
     display: block;
     right: 0px;
-    height: 100%;
+    bottom: 0;
+    height: 96%;
     width: 350px;
     background: rgb(40, 40, 40);
+    z-index: 1;
 }
 
 .tool {
@@ -102,14 +114,34 @@ body, html {
     background: transparent;
     margin-bottom: 20px;
     left: 10px;
-    top: 60px;
+    top: 0px;
     display: block;
     outline: none;
     border: 1px solid white;
 }
 
 .tool:hover {
-    background: rgb(50, 50, 50);
+    background: rgb(60, 60, 60);
+    cursor: pointer;
+}
+
+.menu {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    background: transparent;
+    margin-bottom: 20px;
+    left: 10px;
+    top: 10px;
+    display: block;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+.menu:hover {
+    background: rgb(60, 60, 60);
     cursor: pointer;
 }
 
@@ -137,7 +169,7 @@ h1 {
 
 svg {
     position: relative;
-    top: 50px;
+    top: 30px;
     left: 10px;
 }
 
@@ -152,4 +184,5 @@ g:hover {
     top: 40px;
     left: 60px;
     width: 78.5%;
+    z-index: 1;
 }
