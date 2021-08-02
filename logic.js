@@ -1,4 +1,10 @@
-var maximize = document.getElementById("maximize")
+var maximize = document.getElementById("maximize");
+const { ipcRenderer } = require('electron');
+var minimize = document.getElementById("minimize");
+
+maximize.addEventListener("click", Maximize);
+minimize.addEventListener("click", Minimize);
+
 var myRuler = new ruler({
     container: document.querySelector('#rulers'),
     rulerHeight: 15,
@@ -18,28 +24,15 @@ var text = document.getElementById('text');
 myRuler.api.setPos({x:100, y:100})
 myRuler.api.setScale(1.5);
 
-maximize.addEventListener("click", Maximize)
-
 function Maximize() {
     if (window.innerWidth == screen.width) {
         window.resizeTo(1280, 720);
-        document.getElementById("circle").innerHTML = "&triangle;"
     }
     else {
         window.moveTo(0, 0);
         window.resizeTo(screen.width, screen.height);
-        document.getElementById("circle").innerHTML = "&triangledown;"
     }
 }
-
-window.addEventListener('resize', () => {
-    if (window.innerWidth == screen.width) {
-        document.getElementById("circle").innerHTML = "&triangledown;"
-    }
-    else {
-        document.getElementById("circle").innerHTML = "&triangle;"
-    }
-});
 
 document.getElementById('menu').addEventListener('click', () => {
     if (document.getElementById('pop-out').style.display == "none")
@@ -50,3 +43,7 @@ document.getElementById('menu').addEventListener('click', () => {
         document.getElementById('pop-out').style.display = "none";
     }
 });
+
+function Minimize() {
+    ipcRenderer.send('minimize');
+}

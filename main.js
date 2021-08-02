@@ -1,6 +1,7 @@
 const electron = require('electron');
 const url = require('url');
 const path = require('path');
+const { ipcMain } = require('electron').ipcMain;
 
 const {app, BrowserWindow, Menu} = electron;
 Menu.setApplicationMenu(null);
@@ -19,3 +20,8 @@ app.on('ready', function(){
         slashes: true
     }));
 });
+
+ipcMain.on('minimize', () => {
+    mainWindow.minimize();
+    //win.hide();
+  });
