@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "a poster making tool",
   "main": "main.js",
-  "scripts": {
-    "start": "electron ."
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MatthewZenn/Alchemist.git"
@@ -17,8 +14,6 @@
   },
   "homepage": "https://github.com/MatthewZenn/Alchemist#readme",
   "dependencies": {
-    "d3": "^7.0.0",
-    "electron": "^13.1.7",
     "ruler.js": "^1.0.1"
   }
 }
